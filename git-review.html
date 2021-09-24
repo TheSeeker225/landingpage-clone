@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review of Git with Github | Seeker225 AIJNWJ</title>
+</head>
+<body>
+    
+    <h1>Utiliser Git et Github pour vos travaux personnels et en équipe</h1>
+
+    <p>
+        <ol>
+            <li>Traveiller de manière basique
+
+                <ol>
+                    <li>
+                        Vérifier que Git est installé
+                        <code>git --version</code>
+                    </li>
+                    <li>
+                        Définir l'utilisateur global
+                        <code>
+                            git config --global user.name "Nom complet" <br>
+                            git config --global user.email "monemail@exemple.com"
+                        </code>
+                    </li>
+                    <li>
+                        Créer un nouveau project
+                        <code>
+                            mkdir "nom du projet"<br>
+                        </code>
+                    </li>
+                    <li>
+                        Entrer et initialiser le dépôt
+                        <code>
+                            cd "nom du projet"<br>
+                            git init
+                        </code>
+                    </li>
+                    <li>
+                        Valider les modifications éffectuées
+                        <code>
+                            git status <br>
+                            git add . (ou * ou encore nom-du-fichier.extension) <br>
+                            git commit -m "Message pour le log et l'historique"
+                        </code>
+                        Ce processus est à faire à chaque modification du code source.
+                    </li>
+                    <li>
+                        Pour voir l'historique des modifications de botre
+                        code source
+                        <code>
+                            git log
+                        </code>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Travailler avec les branches
+
+                <ol>
+                    <li>
+                        Créer une branche avec Git
+                        <code>
+                            git branch "nom de la branche"
+                        </code>
+                        Le nom de la branche doit avoir un lien avec
+                        la fonctionnalité traitée pour une meilleure
+                        organisation.
+
+                        Pour voir la liste des branches existantes
+                        <code>
+                            git branch
+                        </code>
+                    </li>
+                    <li>
+                        Pour changer de branche
+
+                        <code>
+                            git checkout "nom de la branche"
+                        </code>
+
+                        Les premières instructions sont valables sur
+                        n'importe quelle branche. Il faut donc faire
+                        attention à la branche sur laquelle nous travaillons.
+                    </li>
+                    <li>
+                        Finaliser les travaux sur la branche principale
+                        <code>
+                            git checkout "master | main" <br>
+                            git merge "nom de la branche à fusionner" <br>
+                            git log
+                        </code>
+                    </li>
+                    <li>
+                        Pour supprimer une branche
+
+                        <code>
+                            git branch -d ",om de la branche à supprimer" <br>
+                        </code>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Et si on travaillait en équipe
+
+                <ol>
+                    Il faut faire un dépôt distant pour 
+                    permettre aux autres de pouvoir travailler.
+                    Nous allons le faire avec Github. 
+
+                    <li>
+                        Créer un un compte sur Github
+                    </li>
+                    <li>
+                        Pour définir un dépôt distant à un projet 
+                        existant :
+                        <code>
+                            git remote add origin "url du depot distant"
+                        </code>
+                    </li>
+                    <li>
+                        Vérifier qu'un projet à un depôt distant 
+
+                        <code>
+                            git remote
+                        </code>
+                    </li>
+                    <li>
+                        Récuperer un projet sur Github
+
+                        <code>
+                            git pull origin master
+                        </code>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </p>
+</body>
+</html>
